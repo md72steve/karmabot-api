@@ -1,5 +1,5 @@
 /**
- * Our representation of Karma.
+ * The request object which we get from Slack
  */
 export class SlackDto {
   token: string; // '1e4htqwXGryUWqGIBpMadIwa',
