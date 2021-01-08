@@ -27,6 +27,7 @@
     "@nestjs/mongoose": "^7.2.0",
     "@nestjs/platform-express": "^7.5.1",
     "@nestjs/swagger": "^4.7.5",
+    "@slack/bolt": "^2.6.1",
     "form-data": "^3.0.0",
     "mongoose": "^5.11.8",
     "reflect-metadata": "^0.1.13",

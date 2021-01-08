@@ -11,7 +11,7 @@ export class SlackService {
    *
    * @param username the name of the user as search criterion
    * @param forceRefresh if true the list of {@link SlackUser} in the database will be refreshed
-   * @returns true if a {@link SlackUser} could be found else false
+   * @return true if a {@link SlackUser} could be found else false
    */
   public async isUserKnown(username: string, forceRefresh = false): Promise<boolean> {
     if (forceRefresh) {
@@ -23,7 +23,7 @@ export class SlackService {
   }
 
   private async refreshSlackUserList(): Promise<void> {
-    const users = await this.slackIs.getSlackUserList();
+    const users = await this.slackIs.usersList();
     this.slackPs.saveSlackUsers(users);
   }
 }
