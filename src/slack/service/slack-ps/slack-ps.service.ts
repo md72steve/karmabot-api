@@ -16,7 +16,7 @@ export class SlackPsService {
     try {
       await this.slackUserModel.insertMany(users, { ordered: false });
     } catch (ex) {
-      console.warn('found duplicates, but will turn a blind eye on that: ', ex);
+      console.warn('found duplicates, but will turn a blind eye on that');
     }
   }
 
@@ -24,7 +24,7 @@ export class SlackPsService {
    * Retrieves a slack user from the database matching a given criterion, e.g. name="schlupp2002".
    *
    * @param criterion the criterion
-   * @returns a slack user | null
+   * @return a slack user | null
    */
   public async getSlackUser(criterion: Partial<SlackUser>): Promise<SlackUser> {
     const result = await this.slackUserModel.findOne(criterion);
